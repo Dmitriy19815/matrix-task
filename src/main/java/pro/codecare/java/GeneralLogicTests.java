@@ -35,7 +35,7 @@ public class GeneralLogicTests {
        */
       Matrix mtrDefault = new Matrix();
       mtrDefault.Multiplication(mtr1, mtr2);
-      System.out.println("Multiply with NO concurrent (default) algirithm for matrix " + mtrDefault.toString());
+      System.out.println("Multiply with NO concurrent (default) algorithm for matrix " + mtrDefault.toString());
       printResults("Multiply.NOconcurrent.results.log", mtr1, mtr2, mtrDefault);
       System.out.println("\tOutput file was generated\n");
 
@@ -44,9 +44,9 @@ public class GeneralLogicTests {
        */
       Matrix mtrSync = new Matrix();
       mtrSync.MultiplicationConcurrent(mtr1, mtr2, 0);
-      System.out.println("Multiply in sync concurrency algirithm for matrix " + mtrSync.toString());
+      System.out.println("Multiply in sync concurrency algorithm for matrix " + mtrSync.toString());
 
-      printResults("Multiply.concurrent0.results.txt", mtr1, mtr2, mtrSync);
+      printResults("Multiply.concurrent0.results.log", mtr1, mtr2, mtrSync);
       System.out.println("\tOutput file was generated\n");
 
       /**
@@ -66,8 +66,8 @@ public class GeneralLogicTests {
        */
       Matrix mtrAsync = new Matrix();
       mtrAsync.MultiplicationConcurrent(mtr1, mtr2, 1);
-      System.out.println("Multiply in async concurrency algirithm for matrix " + mtrAsync.toString());
-      printResults("Multiply.concurrent1.results.txt", mtr1, mtr2, mtrAsync);
+      System.out.println("Multiply in async concurrency algorithm for matrix " + mtrAsync.toString());
+      printResults("Multiply.concurrent1.results.log", mtr1, mtr2, mtrAsync);
       System.out.println("\tOutput file was generated\n");
 
       /**
